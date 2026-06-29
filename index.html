@@ -1,99 +1,266 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html>
 <head>
 <meta charset="UTF-8">
+<title>Gadget Shop</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sohan Gadget Shop</title>
 
 <style>
 body{
-font-family:Arial,sans-serif;
-background:#f2f2f2;
-margin:0;
+  margin:0;
+  font-family:Arial;
+  background:#f2f2f2;
 }
 
 header{
-background:#007bff;
-color:white;
-text-align:center;
-padding:20px;
+  background:green;
+  color:white;
+  text-align:center;
+  padding:18px;
+  font-size:20px;
+}
+
+.container{
+  padding:10px;
 }
 
 .product{
-background:white;
-margin:15px;
-padding:15px;
-border-radius:10px;
-box-shadow:0 0 8px #ccc;
+  background:white;
+  margin-bottom:12px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.product-body{
+  padding:10px;
 }
 
 button{
-background:#28a745;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:5px;
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:none;
+  border-radius:5px;
+  background:green;
+  color:white;
+  font-size:14px;
 }
 
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:20px;
+.cart{
+  background:white;
+  margin:10px;
+  padding:10px;
+  border-radius:10px;
+}
+
+.social{
+  text-align:center;
+  margin:15px;
+}
+
+a{
+  color:green;
+  font-weight:bold;
+  text-decoration:none;
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
-<h1>Sohan Gadget Shop</h1>
-<p>Mini Gadgets Collection</p>
+🔥 My Gadget Shop
 </header>
 
-<div class="product">
-<h2>🎧 Bluetooth Headphone</h2>
-<p>দাম: ১২০০ টাকা</p>
-<button>Buy Now</button>
-</div><!DOCTYPE html>
-<html>
-<head>
-<title>My Gadget Shop</title>
-</head>
-<body>
+<div class="container">
 
-<h1>Welcome to My Gadget Shop</h1>
+  <!-- Product 1 -->
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?w=600" alt="">
+    <div class="product-body">
+      <h3>Bluetooth Earbuds</h3>
+      <p>Price: 1200 TK</p>
+      <button onclick="buyNow('Bluetooth Earbuds',1200)">Buy Now</button>
+    </div>
+  </div>
 
-<h2>Bluetooth Headphone</h2>
-<p>দাম: ১২০০ টাকা</p>
+  <!-- Product 2 -->
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1518441902117-f0a9d9a2c1f6?w=600" alt="">
+    <div class="product-body">
+      <h3>Smart Watch</h3>
+      <p>Price: 2500 TK</p>
+      <button onclick="buyNow('Smart Watch',2500)">Buy Now</button>
+    </div>
+  </div>
 
-<h2>Turbo Fan</h2>
-<p>দাম: ৮৫০ টাকা</p>
+  <!-- Product 3 -->
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1609592806596-4d1a6f5d0c2b?w=600" alt="">
+    <div class="product-body">
+      <h3>Power Bank</h3>
+      <p>Price: 1800 TK</p>
+      <button onclick="buyNow('Power Bank',1800)">Buy Now</button>
+    </div>
+  </div>
 
-<h2>Bluetooth Speaker</h2>
-<p>দাম: ১৫০০ টাকা</p>
+</div>
 
-<button>Buy Now</button>
+<script>
+function buyNow(name, price){
+  let msg = `I want to buy ${name} - ${price} TK`;
+  window.open("https://wa.me/8801XXXXXXXXX?text=" + encodeURIComponent(msg));
+}
+</script>
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gadget Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="product">
-<h2>💨 Turbo Fan</h2>
-<p>দাম: ৮৫০ টাকা</p>
-<button>Buy Now</button>
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f2f2f2;
+}
+
+header{
+  background:green;
+  color:white;
+  text-align:center;
+  padding:18px;
+  font-size:20px;
+}
+
+.container{
+  padding:10px;
+}
+
+.product{
+  background:white;
+  margin-bottom:12px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.product-body{
+  padding:10px;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:none;
+  border-radius:5px;
+  background:green;
+  color:white;
+}
+
+/* Floating buttons */
+.floating{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.floating a{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:22px;
+  text-decoration:none;
+}
+
+.wa{background:#25D366;}
+.ms{background:#0084FF;}
+.yt{background:#FF0000;}
+</style>
+</head>
+
+<body>
+
+<header>
+🔥 Gadget Shop
+</header>
+
+<div class="container">
+
+  <div class="product">
+    <img src="FB_IMG_1782304719769.jpg"https://images.unsplash.com/photo-1518441902117-f0a9d9a2c1f6?w=600">
+    <div class="product-body">
+      <h3>Smart Watch</h3>
+      <p>Price: 2500 TK</p>
+      <button onclick="buyNow('Smart Watch',2500)">Buy Now</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src=FB_IMG_1782304719769.jpg"https://images.unsplash.com/photo-1585386959984-a41552231693?w=600">
+    <div class="product-body">
+      <h3>Earbuds</h3>
+      <p>Price: 1200 TK</p>
+      <button onclick="buyNow('Earbuds',1200)">Buy Now</button>
+    </div>
+  </div>
+
 </div>
 
-<div class="product">
-<h2>🔊 Bluetooth Speaker</h2>
-<p>দাম: ১৫০০ টাকা</p>
-<button>Buy Now</button>
+<!-- Floating Social Buttons -->
+<div class="floating">
+
+  <!-- WhatsApp -->
+  <a class="wa" target="_blank"
+     href="https://wa.me/8801XXXXXXXXX?text=Hello%20I%20want%20to%20order">
+    🟢
+  </a>
+
+  <!-- Messenger -->
+  <a class="ms" target="_blank"
+     href="https://m.me/yourpageusername">
+    💬
+  </a>
+
+  <!-- YouTube -->
+  <a class="yt" target="_blank"
+     href="https://youtube.com/@yourchannel">
+    ▶
+  </a>
+
 </div>
 
-<footer>
-যোগাযোগ: 01XXXXXXXXX
-</footer>
+<script>
+function buyNow(name, price){
+  let msg = `I want to buy ${name} - ${price} TK`;
+  window.open("https://wa.me/8801XXXXXXXXX?text=" + encodeURIComponent(msg));
+}
+</script>
 
 </body>
 </html>
